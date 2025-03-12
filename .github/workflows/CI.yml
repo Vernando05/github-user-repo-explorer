@@ -49,7 +49,7 @@ jobs:
         run: npm run build
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          NEXT_PUBLIC_GITHUB_PAT: ${{ secrets.NEXT_PUBLIC_GITHUB_PAT }}
+          NEXT_PUBLIC_GITHUB_PAT: ${{ vars.NEXT_PUBLIC_GITHUB_PAT }}
 
       - if: github.event_name == 'pull_request'
         name: Validate all commits from PR
